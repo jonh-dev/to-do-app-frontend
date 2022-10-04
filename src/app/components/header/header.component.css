@@ -1,0 +1,11 @@
+img {
+  height: 3rem;
+}
+
+.header {
+  background-color: rgb(230, 230, 230);
+  justify-content: center;
+  height: 8%;
+  border-bottom: 1px solid black;
+}
+

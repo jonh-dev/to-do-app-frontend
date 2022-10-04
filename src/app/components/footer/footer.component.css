@@ -1,0 +1,14 @@
+.footer {
+  background: black;
+  position: fixed;
+  bottom: 0;
+  justify-content: center;
+  justify-items: center;
+  font-size: 1rem;
+  color: white;
+}
+
+.footer p {
+  margin: 0;
+  text-shadow: -5px 8px 30px -3px #000000;
+}

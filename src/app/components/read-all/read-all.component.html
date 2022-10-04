@@ -1,0 +1,27 @@
+<div class="container">
+  <button class="novo-todo" mat-mini-fab color="primary" aria-label="Example icon button with a plus icon">
+    <mat-icon>add</mat-icon>
+  </button>
+
+  <div class="content">
+    <mat-card class="mat-elevation-z8 card" *ngFor="let item of list">
+      <mat-card-title-group>
+        <p>Data para finalizar <br> {{ item.dateToFinish }} </p>
+        <mat-card-title>{{ item.title }}</mat-card-title>
+        <mat-card-subtitle class="subtitle">{{ item.description }}</mat-card-subtitle>
+      </mat-card-title-group>
+      <div class="actions">
+        <button class="done" mat-mini-fab color="primary" aria-label="Example icon button with a done icon">
+          <mat-icon>done</mat-icon>
+        </button>
+        <button class="edit" mat-mini-fab color="primary" aria-label="Example icon button with a edit icon">
+          <mat-icon>edit</mat-icon>
+        </button>
+        <button class="delete" mat-mini-fab color="primary" aria-label="Example icon button with a delete icon">
+          <mat-icon>delete</mat-icon>
+        </button> 
+      </div>
+    </mat-card>
+
+  </div>
+</div>

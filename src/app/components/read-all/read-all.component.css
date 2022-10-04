@@ -1,0 +1,62 @@
+.mat-primary {
+  background-color: #00aee5 !important;
+}
+
+.mat-primary.done:hover {
+  background-color: rgb(7, 202, 0) !important;
+}
+
+.mat-primary.edit:hover {
+  background-color: rgb(214, 214, 1) !important;
+}
+
+.mat-primary.delete:hover {
+  background-color: rgb(250, 0, 0) !important;
+}
+
+.container {
+  max-width: 100%;
+  width: 85%;
+  margin: auto;
+}
+
+.content { 
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 15px;
+  width: 100%;
+}
+
+.content p {
+  text-align: end;
+  font-weight: bold;
+}
+
+.card {
+  max-width: 100%;
+  width: 400px;
+}
+
+.mat-card-subtitle {
+  margin-left: 10px;
+}
+
+.subtitle {
+  padding-top: 10px;
+}
+
+.novo-todo {
+  margin-top: 3rem;
+  margin-bottom: 1rem;
+}
+
+.actions {
+  display: flex;
+  justify-content: end;
+  gap: 15px;
+}
+
+.edit:hover {
+  background-color: yellow;
+}
