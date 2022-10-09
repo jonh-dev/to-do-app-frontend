@@ -1,0 +1,24 @@
+<head>
+  <title>Finished Tasks</title>
+</head>
+<div class="container">
+
+  <div class="upTask">
+    <button (click)="back()" class="badge" mat-button color="primary">Home</button>
+  </div>
+  <div class="content">
+    <mat-card class="mat-elevation-z8 card" *ngFor="let item of listFinished">
+      <mat-card-title-group>
+        <p>Ended in<br> {{ item.dateToFinish }} </p>
+        <mat-card-title>{{ item.title }}</mat-card-title>
+        <mat-card-subtitle class="subtitle">{{ item.description }}</mat-card-subtitle>
+      </mat-card-title-group>
+      <div class="actions">
+        <button (click)="delete(item.id)" class="delete" mat-mini-fab color="primary" aria-label="Example icon button with a delete icon">
+          <mat-icon>delete</mat-icon>
+        </button> 
+      </div>
+    </mat-card>
+
+  </div>
+</div>

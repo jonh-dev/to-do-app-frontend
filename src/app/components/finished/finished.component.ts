@@ -4,13 +4,12 @@ import { Todo } from 'src/app/models/todo';
 import { TodoService } from 'src/app/services/todo.service';
 
 @Component({
-  selector: 'app-read-all',
-  templateUrl: './read-all.component.html',
-  styleUrls: ['./read-all.component.css']
+  selector: 'app-finished',
+  templateUrl: './finished.component.html',
+  styleUrls: ['./finished.component.css']
 })
-export class ReadAllComponent implements OnInit {
+export class FinishedComponent implements OnInit {
 
-  closed = 0;
   list: Todo[] = [];
   listFinished: Todo[] = [];
 
@@ -25,34 +24,22 @@ export class ReadAllComponent implements OnInit {
       answer.forEach(todo => {
         if(todo.finished) {
           this.listFinished.push(todo);
-        } else {
-          this.list.push(todo);
         }
       })
-      this.closed = this.listFinished.length;
-    })
-  }
-
-  finished(item: Todo): void {
-    item.finished = true;
-    this.service.update(item).subscribe((answer) => {
-      this.service.message('Task finished successfully');
-      this.list = this.list.filter(todo => todo.id !== item.id);
-      this.closed++;
     })
   }
 
   delete(id: any):void {
     this.service.delete(id).subscribe((answer) => {
       if(answer === null) {
-        this.service.message('Task deleted successfully');
+        this.service.message('Task deleted successfully')
         this.list = this.list.filter(todo => todo.id !== id);
       }
     })
   }
 
-  finishedTasks(): void {
-    this.router.navigate(['finished']);
+  back(): void {
+    this.router.navigate([''])
   }
 
 }

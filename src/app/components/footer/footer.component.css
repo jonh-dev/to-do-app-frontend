@@ -12,3 +12,13 @@
   margin: 0;
   text-shadow: -5px 8px 30px -3px #000000;
 }
+
+.footer a {
+  text-decoration: none;
+  color: white;
+}
+
+.footer a:hover {
+  transition: 0.2s;
+  color: rgb(8, 77, 180);
+}

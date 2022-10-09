@@ -1,0 +1,31 @@
+<head>
+  <title>Create Task</title>
+</head>
+<form class="mat-elevation-z8 card" #form="ngForm" (ngSubmit)="onSubmit(form)">
+
+  <h1>CREATE YOUR TASK</h1>
+
+  <mat-form-field class="date-to-finish">
+    <mat-label>When does it end?</mat-label>
+    <input [(ngModel)]="todo.dateToFinish" name="todo.dateToFinish" matInput [matDatepicker]="dp3" [min]="currentDate" #nome="ngModel" onchange="validateData(this)" required>
+    <mat-datepicker-toggle matSuffix [for]="dp3"></mat-datepicker-toggle>
+    <mat-datepicker #dp3 disabled="false"></mat-datepicker>
+  </mat-form-field>
+  
+  <div class="forms">
+    <mat-form-field class="form">
+      <mat-label>Title</mat-label>
+      <input [(ngModel)]="todo.title" name="todo.title" matInput placeholder="Ex. Working" required>
+    </mat-form-field>
+    <mat-form-field class="form">
+      <mat-label>Description</mat-label>
+      <input [(ngModel)]="todo.description" name="todo.description"  matInput placeholder="Ex. Solving problems in java." required>
+    </mat-form-field>
+  </div>
+
+  <div class="buttons">
+    <button (click)="create()" type="submit" class="create" mat-button color="primary" [disabled]="!form.valid">Create</button>
+    <button (click)="cancel()" class="cancel" mat-button color="warn">Cancel</button>
+  </div>
+
+</form>
